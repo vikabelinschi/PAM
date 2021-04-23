@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GQ7-k5-HwX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nja-Sb-18n">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,6 +9,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--MainViewController-->
+        <scene sceneID="CjA-J9-PVi">
+            <objects>
+                <viewController title="MainViewController" id="nja-Sb-18n" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SrC-sP-auT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcG-zJ-UY1">
+                                <rect key="frame" x="51" y="129" width="153" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See Gigs"/>
+                                <connections>
+                                    <segue destination="E0M-gg-ADr" kind="show" id="0yq-p6-gOV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1h-W1-tx2">
+                                <rect key="frame" x="51" y="258" width="153" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See Holiday Calendar"/>
+                                <connections>
+                                    <segue destination="lD8-4C-NlV" kind="show" id="T34-Te-Sf7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vZE-tg-vny"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lAW-6t-FdQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJX-nl-dlp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2720.289855072464" y="-771.42857142857144"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="rIj-vs-P0F">
             <objects>
@@ -18,17 +52,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="E0M-gg-ADr" kind="relationship" relationship="rootViewController" id="SbI-jg-t6B"/>
+                        <segue destination="nja-Sb-18n" kind="relationship" relationship="rootViewController" id="RSb-gh-S7s"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eph-SN-Bns" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2984" y="-782"/>
+            <point key="canvasLocation" x="-3610" y="-771"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="FI7-8f-hky">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wCg-wB-9TI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="FirstViewController" id="E0M-gg-ADr" customClass="FirstViewController" customModule="PAM_Lab1" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="kkc-IU-41w">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -77,8 +110,48 @@
                         <outlet property="collectionView" destination="kkc-IU-41w" id="tao-So-Xlj"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wCg-wB-9TI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2000.0000000000002" y="-771.42857142857144"/>
+            <point key="canvasLocation" x="-1736" y="-782"/>
+        </scene>
+        <!--HolidaysTableViewController-->
+        <scene sceneID="WJU-eC-RSW">
+            <objects>
+                <viewController title="HolidaysTableViewController" id="lD8-4C-NlV" customClass="HolidaysTableViewController" customModule="PAM_Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fai-sg-it7" customClass="TableView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="fgE-LM-oJJ">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Hup-BV-Tjy">
+                            <rect key="frame" x="0.0" y="773.5" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <viewLayoutGuide key="contentLayoutGuide" id="PsK-Ob-S1u"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="U7v-5a-hZG"/>
+                        </scrollView>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="AB3-8q-zMS">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AB3-8q-zMS" id="dXv-5g-eTv">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="vAp-4C-5D1"/>
+                    <connections>
+                        <outlet property="searchBar" destination="fgE-LM-oJJ" id="eLM-4U-O27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btq-AM-6E5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2075.36231884058" y="-25.446428571428569"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="T81-6V-Sxy">
