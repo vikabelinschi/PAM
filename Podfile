@@ -1,5 +1,4 @@
 # Uncomment the next line to define a global platform for your project
-source 'https://github.com/CocoaPods/Specs.git'
 # platform :ios, '9.0'
 
 target 'PAM_Lab1' do
@@ -12,10 +11,9 @@ target 'PAM_Lab1' do
     inherit! :search_paths
     # Pods for testing
   end
-target 'PAM_Lab1Tests' do
+target 'PAM_Lab1' do
   pod “Alamofire”, '~> 4.0'
 end
-
 
   target 'PAM_Lab1UITests' do
     # Pods for testing
