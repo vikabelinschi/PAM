@@ -11,7 +11,7 @@ enum HolidaysTableError {
     case mappingFailed
     case reloadFailed
 }
-protocol HolidaysTableViewModel {
+ protocol HolidaysTableViewModel {
 
     var state: Holidays { get}
     
